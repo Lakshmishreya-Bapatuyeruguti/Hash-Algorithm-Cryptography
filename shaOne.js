@@ -98,6 +98,7 @@ function sha1Hash() {
         add(rotateLeft(a, 5), process(t, b, c, d)),
         add(add(e, w[t]), K(t))
       );
+      //assigning previous variable value into next variable for each iteration
       e = d;
       d = c;
       c = rotateLeft(b, 30);
@@ -124,6 +125,5 @@ function hashedValue() {
   finalHashedVal = sha1Hash();
   console.log(finalHashedVal);
   let outputString = document.getElementById("hashVal");
-
   outputString.value = finalHashedVal;
 }
