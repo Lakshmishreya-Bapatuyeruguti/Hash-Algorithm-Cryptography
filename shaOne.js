@@ -12,9 +12,9 @@ function divideIntoBlocks(inputString) {
   //converting string values in ascii values
   for (i = 0; i < inputString.length; i++) {
     totalBlocks[i >> 2] =
-      totalBlocks[i >> 2] | (inputString.charCodeAt(i) << (24 - (i % 4) * 8)); //-----brackets
+      totalBlocks[i >> 2] | (inputString.charCodeAt(i) << (24 - (i % 4) * 8));
   }
-  totalBlocks[i >> 2] = totalBlocks[i >> 2] | (0x80 << (24 - (i % 4) * 8)); //-----brackets
+  totalBlocks[i >> 2] = totalBlocks[i >> 2] | (0x80 << (24 - (i % 4) * 8));
   //   Adding length of string as well
   totalBlocks[size - 1] = inputString.length * 8;
   return totalBlocks;
@@ -98,6 +98,11 @@ function sha1Hash() {
         add(rotateLeft(a, 5), process(t, b, c, d)),
         add(add(e, w[t]), K(t))
       );
+      e = d;
+      d = c;
+      c = rotateLeft(b, 30);
+      b = a;
+      a = conT;
     }
     a = add(a, prevValueOfA);
     b = add(b, prevValueOfB);
