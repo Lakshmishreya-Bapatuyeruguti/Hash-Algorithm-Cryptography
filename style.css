@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+.container {
+  width: 40%;
+  text-align: center;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 5%;
+  height: 300px;
+  border: 2px solid #404584;
+}
+.inputStr {
+  margin: 4% 0;
+}
+.outputStr {
+  margin: 4% 0;
+}
+#strVal {
+  padding-left: 1%;
+  width: 50%;
+  height: 40px;
+  outline: none;
+}
+#hashVal {
+  padding-left: 1%;
+  width: 50%;
+  height: 40px;
+  outline: none;
+}
+button {
+  margin: auto;
+  height: 40px;
+  padding: 1%;
+  color: azure;
+  background-color: #404584;
+}
+h1 {
+  padding-top: 2%;
+  color: #404584;
+  font-style: italic;
+}
+label {
+  font-size: 17px;
+  padding-right: 12px;
+}
